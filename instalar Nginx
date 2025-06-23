@@ -1,0 +1,16 @@
+---
+- name: Instalar Nginx
+  hosts: all  # o usa un grupo específico de tu inventario
+  become: yes  # ejecuta como sudo
+
+  tasks:
+    - name: Instalar Nginx
+      dnf:
+        name: nginx
+        state: present
+
+    - name: Iniciar servicio Nginx
+      service:
+        name: nginx
+        state: started
+        enabled: yes
