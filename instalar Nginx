@@ -1,6 +1,6 @@
 ---
 - name: Instalar Nginx
-  hosts: all  # o usa un grupo específico de tu inventario
+  hosts: all  
   become: yes  # ejecuta como sudo
 
   tasks:
